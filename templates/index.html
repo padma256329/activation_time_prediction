@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>activation time Prediction</title>
+  </head>
+
+<body>
+ <div class="login">
+	<h1>activation time</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_time')}}"method="POST">
+    	<input type="text" name="Trial_Type" placeholder="Trial_Type" required="required" />
+        <input type="text" name="Therapeutic_Area" placeholder="Therapeutic_Area" required="required" />
+        <input type="text" name="Trial_Phase" placeholder="Trial_Phase" required="required" />
+        <input type="text" name="Number_of_Patients" placeholder="Number_of_Patients" required="required" />
+        <input type="text" name="Inclusion_Criteria" placeholder="Inclusion_Criteria" required="required" />
+        <input type="text" name="Site_Capacity" placeholder="Site_Capacity" required="required" />
+	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">predict_time</button>
+    </form>
+
+   <br>
+   <br>
+   {{prediction_text}}
+
+ </div>
