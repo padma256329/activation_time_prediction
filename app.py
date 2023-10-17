@@ -16,7 +16,7 @@ def predict_time():
         final_features = [np.array(int_features)]
         output = model.predict(final_features)
         #output = round(output[0], 2)
-        return render_template('index.html', prediction_text='Predicted activation time {}'.format(output))
+        return render_template('index.html', prediction_text='Predicted activation time {}'.format(output[0]))
     except Exception as e:
         return str(e)
 
